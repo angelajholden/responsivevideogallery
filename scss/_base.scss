@@ -56,6 +56,7 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
+  color: #555;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -74,6 +75,7 @@ pre, code {
 }
 code {
   padding: 5px;
+  vertical-align: 3px;
 }
 p,
 ol {
@@ -83,6 +85,15 @@ ol {
 ul li,
 ol li {
   margin: 20px 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: dotted 2px #fff;
+  &:hover, &:active, &:focus {
+    color: #fff;
+    border-bottom: solid 2px #fff;
+  }
 }
 
 /* Sections
@@ -97,7 +108,7 @@ section {
   @include background-size(cover);
   p {
     width: 50%;
-    margin: 7.5% auto;
+    margin: 10% auto;
     text-align: center;
   }
 }
@@ -125,7 +136,10 @@ section {
 }
 /* Second Section */
 .second {
-  background: $teal;
+  background: $tan;
+  h1 {
+    color: #555;
+  }
 }
 /* Third Section */
 .third {
@@ -154,11 +168,23 @@ section {
     background: darken($teal,7.5%);
   }
 }
+/* Sixth Section */
+.sixth {
+  background: $purple;
+  pre, code {
+    color: darken($purple,40%);
+    text-shadow: 0 1px 0 $purple;
+    background: darken($purple,7.5%);
+  }
+}
 
 /* Video Gallery
 ************************************************
 */
 .video {
+  background: #fff;
+  padding-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
   @include grid;
   img {
     width: 100%;
@@ -171,7 +197,6 @@ section {
 */
 img {
   max-width: 100%;
-  height: auto;
 }
 
 /* Clearfix 
@@ -186,3 +211,10 @@ img {
 /* Footer 
 ************************************************
 */
+footer {
+  clear: both;
+  background: $blue;
+  margin: 0;
+  padding: 5%;
+  text-align: center;
+}

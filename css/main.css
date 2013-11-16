@@ -61,6 +61,7 @@ h2 {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
+  color: #555;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -81,6 +82,7 @@ pre, code {
 
 code {
   padding: 5px;
+  vertical-align: 3px;
 }
 
 p,
@@ -92,6 +94,16 @@ ol {
 ul li,
 ol li {
   margin: 20px 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: dotted 2px #fff;
+}
+a:hover, a:active, a:focus {
+  color: #fff;
+  border-bottom: solid 2px #fff;
 }
 
 /* Sections
@@ -111,7 +123,7 @@ section {
 }
 .first p {
   width: 50%;
-  margin: 7.5% auto;
+  margin: 10% auto;
   text-align: center;
 }
 
@@ -143,7 +155,10 @@ section {
 
 /* Second Section */
 .second {
-  background: #4892b5;
+  background: #eee9e9;
+}
+.second h1 {
+  color: #555;
 }
 
 /* Third Section */
@@ -176,13 +191,30 @@ section {
   background: #3d7c9a;
 }
 
+/* Sixth Section */
+.sixth {
+  background: #bb4b79;
+}
+.sixth pre, .sixth code {
+  color: #2a101b;
+  text-shadow: 0 1px 0 #bb4b79;
+  background: #a23d67;
+}
+
 /* Video Gallery
 ************************************************
 */
 .video {
+  background: #fff;
+  padding-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   width: 18%;
   margin: 1%;
   float: left;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media (max-width: 1366px) {
   .video {
@@ -220,7 +252,6 @@ section {
 */
 img {
   max-width: 100%;
-  height: auto;
 }
 
 /* Clearfix 
@@ -235,6 +266,14 @@ img {
 /* Footer 
 ************************************************
 */
+footer {
+  clear: both;
+  background: #2b4f71;
+  margin: 0;
+  padding: 5%;
+  text-align: center;
+}
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,

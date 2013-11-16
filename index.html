@@ -146,11 +146,17 @@
       <p>First the vanilla CSS:</p>
 
 <pre>
+  /* It's important to use percentages or there may be gaps on the right side of the page. */
   .video {
-    width: 18%; /* 18% + 1% on each side is 20%. This provides a nice, fluid width and margins, with thumbnails 5 across on large screens. */
-    margin: 1%; /* It's important the margins remain fluid or there may be gaps on the right side of the page. */
+    background: #fff;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    width: 18%; /* Thumbnails 5 across */
+    margin: 1%;
     float: left;
   }
+
+  /* Media Queries */
   @media (max-width: 1366px) {
     .video {
       width: 23%; /* Thumbnails 4 across */
@@ -161,7 +167,7 @@
       width: 31.333%; /* Thumbnails 3 across */
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .video {
       width: 48%; /* Thumbnails 2 across */
     }
@@ -174,19 +180,21 @@
       float: none;
     }
   }
+
+  /* These are my preferred rollover styles. */
   .video img {
     width: 100%;
     opacity: 1;
   }
   .video img:hover, .video img:active, .video img:focus {
-    opacity: 0.75;  /* This is my preferred rollover style. */
+    opacity: 0.75;
   }</pre>
 
       <ol>
-        <li>The media query breakpoints are videos 5 across for screen sizes greater than 1366px, 4 across for sizes greater than 1024px, 3 across for sizes greater than 480px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather <code>display:block</code> in a single column.</li>
+        <li>The media query breakpoints are videos 5 across for screen sizes greater than 1366px, 4 across for sizes greater than 1024px, 3 across for sizes greater than 600px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather <code>display:block</code> in a single column.</li>
         <li>Keeping the widths and margins fluid with percentages is important for this gallery’s responsive layout. If you use <code>px</code>, <code>em</code>, or <code>rem</code>, you’re likely to have large gaps on the right side of the page.</li>
-        <li>It’s also important to stretch the thumbnail image with <code>width:100%</code> on screen sizes that exceed the natural size of the image. When the screen size is smaller than their natural size, <code>max-width:100%</code> takes over and the images are responsive.</li>
-        <li>Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.</li>
+        <li>It’s important to stretch the thumbnail image with <code>width:100%</code> on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the <code>article</code> is smaller than the images's natural size, and <code>max-width:100%</code> takes over so the images are responsive.</li>
+        <li>Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each <code>article</code> height will be different and break the layout.</li>
       </ol>
 
     </section>
@@ -207,7 +215,7 @@
     @media (max-width: 1024px) {
       width: 31.333%;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       width: 48%;
     }
     @media (max-width: 360px) {
@@ -228,18 +236,61 @@
 
 <pre>
   .video {
+    background: #fff;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
     @include grid;
-    @include hover;
     img {
       width: 100%;
+      @include hover;
     }
   }</pre>
 
     </section>
 
+    <section class="sixth">
+      <header>
+        <h1>Using Fancybox</h1>
+      </header>
+
+        <p>Fancybox comes with a style sheet you can copy and paste into your CSS. But if you’re using Sass, you should create a partial file and <code>@import</code> it into your global or main style sheet. I generally don't make any changes to these styles.</p>
+
+        <p>Calling and writing the scripts:</p>
+
+<pre>
+  // These should go in the footer.
+  &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js">&lt;/script>
+  &lt;script src="js/jquery.fancybox.min.js">&lt;/script>
+
+  // If you don't use a global js sheet, these can also go in the footer.
+  &lt;script>
+    $(document).ready(function() {
+      $('.fancybox').fancybox({
+        padding   : 0,
+        maxWidth  : '100%',
+        maxHeight : '100%',
+        width   : 560,
+        height    : 315,
+        autoSize  : true,
+        closeClick  : true,
+        openEffect  : 'elastic',
+        closeEffect : 'elastic'
+      });
+    });
+  &lt;/script></pre>
+
+      <ol>
+        <li>First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.</li>
+        <li>Then link to the Fancybox script which should be in a folder. All the better if it's minified.</li>
+        <li>There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.</li>
+      </ol>
+
+    </section>
+
   </body>
 
-  <footer class="clearfix">
+  <footer>
+    <p>Simple Responsive Video Gallery by <a href="http://angelajholden.com" target="_blank">Angela J. Holden</a><p>
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
