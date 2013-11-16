@@ -40,6 +40,9 @@ figure {
 /* Typography
 ************************************************
 */
+header {
+  margin-bottom: 5%;
+}
 h1 {
   font-size: 48px;
   font-weight: 400;
@@ -50,7 +53,7 @@ h1 {
   margin: 0;
 }
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
   text-transform: uppercase;
@@ -59,18 +62,27 @@ h2 {
   padding: 5px 8px;
   margin: 0;
 }
-pre {
+pre, code {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
   font-size: 16px;
-  color: darken($green,40%);
-  text-shadow: 0 1px 0 $green;
   line-height: 2;
   overflow: auto;
   width: 75%;
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
-  background: darken($green,7.5%);
+}
+code {
+  padding: 5px;
+}
+p,
+ol {
+    width: 70%;
+    margin: 2.5% auto;
+  }
+ul li,
+ol li {
+  margin: 20px 0;
 }
 
 /* Sections
@@ -118,6 +130,29 @@ section {
 /* Third Section */
 .third {
   background: $green;
+  pre, code {
+    color: darken($green,40%);
+    text-shadow: 0 1px 0 $green;
+    background: darken($green,7.5%);
+  }
+}
+/* Fourth Section */
+.fourth {
+  background: $orange;
+  pre, code {
+    color: darken($orange,40%);
+    text-shadow: 0 1px 0 $orange;
+    background: darken($orange,7.5%);
+  }
+}
+/* Fifth Section */
+.fifth {
+  background: $teal;
+  pre, code {
+    color: darken($teal,40%);
+    text-shadow: 0 1px 0 $teal;
+    background: darken($teal,7.5%);
+  }
 }
 
 /* Video Gallery
