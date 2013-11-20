@@ -8,24 +8,24 @@ Earlier this year I worked on a large website redesign that required a video gal
 The code I wrote is open source and free to be copied, used, and changed.
 
 Fancybox is Copy Protected by Janis Skarnelis: 
-##http://www.fancyapps.com/fancybox/#license
-##https://github.com/fancyapps/fancyBox
+http://www.fancyapps.com/fancybox/#license
+https://github.com/fancyapps/fancyBox
 
 How to use
 ----------
 
-<article>
-  <figure>
-    <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/paG__3FBLzI">
-    <img class="videoThumb" src="http://i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
-  </figure>
-  <h2 class="videoTitle">Mesopotamia</h2>
-</article>
+	<article>
+	  <figure>
+	    <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/paG__3FBLzI">
+	    <img class="videoThumb" src="http://i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
+	  </figure>
+	  <h2 class="videoTitle">Mesopotamia</h2>
+	</article>
 
-##Use two classes: fancybox and fancybox.iframe on the a tag.
-##Use the URL in the iframe embed code, not the copy & paste URL.
-##Right click on the YouTube or Vimeo video thumbnail and copy the image URL for the source.
-##Use your own class names for the article, img src, and video title.
+Use two classes: fancybox and fancybox.iframe on the a tag.
+Use the URL in the iframe embed code, not the copy & paste URL.
+Right click on the YouTube or Vimeo video thumbnail and copy the image URL for the source.
+Use your own class names for the article, img src, and video title.
 
 Next write the CSS
 ==================
@@ -77,10 +77,10 @@ First the vanilla CSS:
     opacity: 0.75;
   }
 
-##The media query breakpoints are videos 5 across for screen sizes greater than 1366px, 4 across for sizes greater than 1024px, 3 across for sizes greater than 600px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather display:block in a single column.
-##Keeping the widths and margins fluid with percentages is important for this gallery’s responsive layout. If you use px, em, or rem, you’re likely to have large gaps on the right side of the page.
-##It’s important to stretch the thumbnail image with width:100% on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the article is smaller than the images's natural size, and max-width:100% takes over so the images are responsive.
-##Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
+The media query breakpoints are videos 5 across for screen sizes greater than 1366px, 4 across for sizes greater than 1024px, 3 across for sizes greater than 600px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather display:block in a single column.
+Keeping the widths and margins fluid with percentages is important for this gallery’s responsive layout. If you use px, em, or rem, you’re likely to have large gaps on the right side of the page.
+It’s important to stretch the thumbnail image with width:100% on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the article is smaller than the images's natural size, and max-width:100% takes over so the images are responsive.
+Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
 
 Use as a mixin in Sass
 ======================
@@ -129,7 +129,7 @@ Then include it in your video style:
 Using Fancybox
 ==============
 
-Fancybox comes with a style sheet you can copy and paste into your CSS. But if you’re using Sass, you should create a partial file and @import it into your global or main style sheet. I generally don't make any changes to these styles.
+	Fancybox comes with a style sheet you can copy and paste into your CSS. But if you’re using Sass, you should create a partial file and @import it into your global or main style sheet. I generally don't make any changes to these styles.
 
 Calling and writing the scripts:
 --------------------------------
@@ -155,6 +155,6 @@ Calling and writing the scripts:
     });
   </script>
 
-##First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.
-##Then link to the Fancybox script which should be in a folder. All the better if it's minified.
-##There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
+	First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.
+	Then link to the Fancybox script which should be in a folder. All the better if it's minified.
+	There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
