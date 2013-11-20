@@ -6,12 +6,14 @@ Earlier this year I worked on a large website redesign that required a video gal
 
 The code I wrote is open source and free to be copied, used, and changed.
 
-Fancybox is Copy Protected by Janis Skarnelis:
+Fancybox is Copyright Protected by Janis Skarnelis:
 
-+http://www.fancyapps.com/fancybox/#license
-+https://github.com/fancyapps/fancyBox
++ http://www.fancyapps.com/fancybox/#license
++ https://github.com/fancyapps/fancyBox
 
-##How to use
+###See <a href="http://responsivevideogallery.com">The Video Gallery</a>.
+
+##First write the HTML
 
 	<article>
 	  <figure>
