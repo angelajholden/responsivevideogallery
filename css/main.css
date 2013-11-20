@@ -30,7 +30,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
-  color: white;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -40,8 +40,19 @@ figure {
   padding: 0;
 }
 
+p,
+ol {
+  width: 70%;
+  margin: 2.5% auto;
+}
+
+ul li,
+ol li {
+  margin: 20px 0;
+}
+
 /* Typography
-************************************************
+***********************************************
 */
 header {
   margin-bottom: 5%;
@@ -85,17 +96,6 @@ code {
   vertical-align: 3px;
 }
 
-p,
-ol {
-  width: 70%;
-  margin: 2.5% auto;
-}
-
-ul li,
-ol li {
-  margin: 20px 0;
-}
-
 a {
   color: #fff;
   text-decoration: none;
@@ -107,7 +107,7 @@ a:hover, a:active, a:focus {
 }
 
 /* Sections
-***********************************************
+**********************************************
 */
 section {
   padding: 10% 5%;
@@ -137,7 +137,7 @@ section {
 }
 .buttons li a {
   font-size: 30px;
-  color: white;
+  color: #fff;
   padding: 20px;
   background: #bc8542;
   border: 2px solid #bc8542;
@@ -150,7 +150,7 @@ section {
 }
 .buttons li a:hover, .buttons li a:active, .buttons li a:focus {
   background: none;
-  border: 2px solid white;
+  border: 2px solid #fff;
 }
 
 /* Second Section */
@@ -202,7 +202,7 @@ section {
 }
 
 /* Video Gallery
-************************************************
+********************************************
 */
 .video {
   background: #fff;
@@ -264,7 +264,7 @@ img {
 }
 
 /* Footer 
-************************************************
+********************************************
 */
 footer {
   clear: both;

@@ -10,7 +10,7 @@ main,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 /* Body Styles
@@ -28,7 +28,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
-  color: white;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -36,9 +36,18 @@ figure {
   margin: 0;
   padding: 0;
 }
+p,
+ol {
+  width: 70%;
+  margin: 2.5% auto;
+}
+ul li,
+ol li {
+  margin: 20px 0;
+}
 
 /* Typography
-************************************************
+***********************************************
 */
 header {
   margin-bottom: 5%;
@@ -77,15 +86,6 @@ code {
   padding: 5px;
   vertical-align: 3px;
 }
-p,
-ol {
-    width: 70%;
-    margin: 2.5% auto;
-  }
-ul li,
-ol li {
-  margin: 20px 0;
-}
 a {
   color: #fff;
   text-decoration: none;
@@ -97,7 +97,7 @@ a {
 }
 
 /* Sections
-***********************************************
+**********************************************
 */
 section {
   padding: 10% 5%;
@@ -120,7 +120,7 @@ section {
     margin: 0 25px;
     a {
       font-size: 30px;
-      color: white;
+      color: #fff;
       padding: 20px;
       background: $orange;
       border: 2px solid $orange;
@@ -129,7 +129,7 @@ section {
       @include single-transition(all, 0.3s, ease);
       &:hover, &:active, &:focus {
         background: none;
-        border: 2px solid white;
+        border: 2px solid #fff;
       }
     }
   }
@@ -179,7 +179,7 @@ section {
 }
 
 /* Video Gallery
-************************************************
+********************************************
 */
 .video {
   background: #fff;
@@ -209,7 +209,7 @@ img {
 }
 
 /* Footer 
-************************************************
+********************************************
 */
 footer {
   clear: both;
