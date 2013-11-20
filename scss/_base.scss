@@ -31,6 +31,12 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 figure {
   margin: 0;
@@ -40,10 +46,20 @@ p,
 ol {
   width: 70%;
   margin: 2.5% auto;
+  padding-left: 20px;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 }
 ul li,
 ol li {
   margin: 20px 0;
+}
+p, ul {
+  padding-left: 0;
 }
 
 /* Typography
@@ -60,6 +76,12 @@ h1 {
   letter-spacing: 1px;
   text-align: center;
   margin: 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
 }
 h2 {
   font-size: 18px;
@@ -71,6 +93,9 @@ h2 {
   text-align: center;
   padding: 5px 8px;
   margin: 0;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+  }
 }
 pre, code {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
@@ -81,10 +106,15 @@ pre, code {
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 code {
   padding: 5px;
   vertical-align: 3px;
+  white-space: nowrap;
 }
 a {
   color: #fff;
@@ -101,6 +131,7 @@ a {
 */
 section {
   padding: 10% 5%;
+  width: 100%;
 }
 /* First Section */
 .first {
@@ -110,6 +141,9 @@ section {
     width: 50%;
     margin: 10% auto;
     text-align: center;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
   }
 }
 .buttons {
@@ -118,6 +152,11 @@ section {
   li {
     display: inline-block;
     margin: 0 25px;
+    padding: 0;
+    @media (max-width: 768px) {
+      display: block;
+      margin: 50px auto 0;
+    }
     a {
       font-size: 30px;
       color: #fff;
@@ -127,6 +166,10 @@ section {
       border-radius: 10px;
       text-decoration: none;
       @include single-transition(all, 0.3s, ease);
+      @media (max-width: 1024px) {
+        padding: 15px;
+        font-size: 22px;
+      }
       &:hover, &:active, &:focus {
         background: none;
         border: 2px solid #fff;

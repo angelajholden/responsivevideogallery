@@ -34,6 +34,16 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
 
 figure {
   margin: 0;
@@ -44,11 +54,28 @@ p,
 ol {
   width: 70%;
   margin: 2.5% auto;
+  padding-left: 20px;
+}
+@media (max-width: 1024px) {
+  p,
+  ol {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  p,
+  ol {
+    width: 100%;
+  }
 }
 
 ul li,
 ol li {
   margin: 20px 0;
+}
+
+p, ul {
+  padding-left: 0;
 }
 
 /* Typography
@@ -67,6 +94,16 @@ h1 {
   text-align: center;
   margin: 0;
 }
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+}
 
 h2 {
   font-size: 18px;
@@ -79,6 +116,11 @@ h2 {
   padding: 5px 8px;
   margin: 0;
 }
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 15px;
+  }
+}
 
 pre, code {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
@@ -90,10 +132,17 @@ pre, code {
   padding: 10px;
   border-radius: 10px;
 }
+@media (max-width: 1024px) {
+  pre, code {
+    width: 100%;
+    font-size: 14px;
+  }
+}
 
 code {
   padding: 5px;
   vertical-align: 3px;
+  white-space: nowrap;
 }
 
 a {
@@ -111,6 +160,7 @@ a:hover, a:active, a:focus {
 */
 section {
   padding: 10% 5%;
+  width: 100%;
 }
 
 /* First Section */
@@ -126,6 +176,11 @@ section {
   margin: 10% auto;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .first p {
+    width: 90%;
+  }
+}
 
 .buttons {
   list-style-type: none;
@@ -134,6 +189,13 @@ section {
 .buttons li {
   display: inline-block;
   margin: 0 25px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .buttons li {
+    display: block;
+    margin: 50px auto 0;
+  }
 }
 .buttons li a {
   font-size: 30px;
@@ -147,6 +209,12 @@ section {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .buttons li a {
+    padding: 15px;
+    font-size: 22px;
+  }
 }
 .buttons li a:hover, .buttons li a:active, .buttons li a:focus {
   background: none;
@@ -226,12 +294,12 @@ section {
     width: 31.333%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .video {
     width: 48%;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .video {
     display: block;
     width: 96%;
