@@ -39,7 +39,6 @@ First the vanilla CSS:
 ----------------------
 
   /* It's important to use percentages or there may be gaps on the right side of the page. */
-
   .video {
     background: #fff;
     padding-bottom: 20px;
@@ -48,27 +47,22 @@ First the vanilla CSS:
     margin: 1%;
     float: left;
   }
-
   /* Media Queries */
-
   @media (max-width: 1366px) {
     .video {
       width: 23%; /* Thumbnails 4 across */
     }
   }
-
   @media (max-width: 1024px) {
     .video {
       width: 31.333%; /* Thumbnails 3 across */
     }
   }
-
   @media (max-width: 600px) {
     .video {
       width: 48%; /* Thumbnails 2 across */
     }
   }
-
   @media (max-width: 360px) {
     .video {
       display: block;
@@ -77,14 +71,11 @@ First the vanilla CSS:
       float: none;
     }
   }
-
   /* These are my preferred rollover styles. */
-
   .video img {
     width: 100%;
     opacity: 1;
   }
-
   .video img:hover, .video img:active, .video img:focus {
     opacity: 0.75;
   }
@@ -104,19 +95,15 @@ Use as a mixin in Sass
     width: 18%;
     margin: 1%;
     float: left;
-    
     @media (max-width: 1366px) {
       width: 23%;
     }
-
     @media (max-width: 1024px) {
       width: 31.333%;
     }
-
     @media (max-width: 600px) {
       width: 48%;
     }
-
     @media (max-width: 360px) {
       display: block;
       width: 96%;
@@ -124,7 +111,6 @@ Use as a mixin in Sass
       float: none;
     }
   }
-
   @mixin hover {
     opacity: 1;
     &:hover, &:active, &:focus {
@@ -154,31 +140,27 @@ Fancybox comes with a style sheet you can copy and paste into your CSS. But if y
 Calling and writing the scripts:
 --------------------------------
 
-  // These should go in the footer.
+	// These should go in the footer.
+	//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js
+	js/jquery.fancybox.min.js
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
+	// If you don't use a global js sheet, these can also go in the footer.
+	  $(document).ready(function() {
+	    $('.fancybox').fancybox({
+	      padding   : 0,
+	      maxWidth  : '100%',
+	      maxHeight : '100%',
+	      width   : 560,
+	      height    : 315,
+	      autoSize  : true,
+	      closeClick  : true,
+	      openEffect  : 'elastic',
+	      closeEffect : 'elastic'
+	    });
+	  });
 
-  // If you don't use a global js sheet, these can also go in the footer.
+First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.
 
-  <script>
-    $(document).ready(function() {
-      $('.fancybox').fancybox({
-        padding   : 0,
-        maxWidth  : '100%',
-        maxHeight : '100%',
-        width   : 560,
-        height    : 315,
-        autoSize  : true,
-        closeClick  : true,
-        openEffect  : 'elastic',
-        closeEffect : 'elastic'
-      });
-    });
-  </script>
+Then link to the Fancybox script which should be in a folder. All the better if it's minified.
 
-	First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.
-
-	Then link to the Fancybox script which should be in a folder. All the better if it's minified.
-
-	There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
+There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
