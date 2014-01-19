@@ -1,8 +1,6 @@
 #Responsive Video Gallery
 
-##A simple responsive video gallery
-
-Earlier this year I worked on a large website redesign that required a video gallery. It was a WordPress website and would contain videos from YouTube and Vimeo. I decided a custom post type and custom fields was the best approach, and what follows is the HTML5/CSS and jQuery app, Fancybox.
+I recently worked on a website redesign that needed a video gallery. It was a WordPress project and would contain videos from YouTube and Vimeo. I decided a custom post type and custom fields was the best approach, and what follows is the HTML5/CSS and jQuery app, Fancybox.
 
 The code I wrote is open source and free to be copied, used, and changed.
 
