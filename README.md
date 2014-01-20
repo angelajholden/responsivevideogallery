@@ -13,7 +13,7 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 
 #First write the HTML
 
-	<article>
+	<article class="video">
 	  <figure>
 	    <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/paG__3FBLzI">
 	    <img class="videoThumb" src="http://i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
