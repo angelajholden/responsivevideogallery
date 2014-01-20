@@ -29,7 +29,16 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 #Next write the CSS
 ##First the vanilla CSS:
 
-	  /* It's important to use percentages or there may be gaps on the right side of the page. */
+		/* First make sure the video thumbnail images are responsive. */
+		.img {
+			max-width: 100%;
+			height: auto;
+		}
+
+	  /* 
+	  This is the starting grid for each video with thumbnails 5 across for the largest screen size.
+	  It's important to use percentages or there may be gaps on the right side of the page. 
+	  */
 	  .video {
 	    background: #fff;
 	    padding-bottom: 20px;
@@ -38,7 +47,8 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	    margin: 1%;
 	    float: left;
 	  }
-	  /* Media Queries */
+	  
+	  /* Media Queries - This is the responsive grid. */
 	  @media (max-width: 1366px) {
 	    .video {
 	      width: 23%; /* Thumbnails 4 across */
@@ -62,6 +72,7 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	      float: none;
 	    }
 	  }
+
 	  /* These are my preferred rollover styles. */
 	  .video img {
 	    width: 100%;

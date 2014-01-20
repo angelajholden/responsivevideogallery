@@ -147,7 +147,16 @@
       <p>First the vanilla CSS:</p>
 
 <pre>
-  /* It's important to use percentages or there may be gaps on the right side of the page. */
+  /* First make sure the video thumbnail images are responsive. */
+    .img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  /* 
+  This is the starting grid for each video with thumbnails 5 across for the largest screen size.
+  It's important to use percentages or there may be gaps on the right side of the page. 
+  */
   .video {
     background: #fff;
     padding-bottom: 20px;
@@ -157,7 +166,7 @@
     float: left;
   }
 
-  /* Media Queries */
+  /* Media Queries - This is the responsive grid. */
   @media (max-width: 1366px) {
     .video {
       width: 23%; /* Thumbnails 4 across */
