@@ -29,11 +29,11 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 #Next write the CSS
 ##First the vanilla CSS:
 
-	/* First make sure the video thumbnail images are responsive. */
-	img {
-		max-width: 100%;
-		height: auto;
-	}
+		/* First make sure the video thumbnail images are responsive. */
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 
 	  /* 
 	  This is the starting grid for each video with thumbnails 5 across for the largest screen size.
