@@ -37,6 +37,13 @@
         </figure>
         <h2 class="videoTitle">Kumru Ballad</h2>
       </article>
+
+      <article class="video">
+        <figure>
+        <a class="fancybox fancybox.iframe" href="//player.vimeo.com/video/26890275"><img class="videoThumb" src="https://secure-b.vimeocdn.com/ts/178/010/178010767_295.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Kumru Orchestral</h2>
+      </article>
       
       <article class="video">
         <figure>
@@ -64,6 +71,13 @@
         <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/WQ3Gf9PLUO8"><img class="videoThumb" src="http://i1.ytimg.com/vi/WQ3Gf9PLUO8/mqdefault.jpg"></a>
         </figure>
         <h2 class="videoTitle">Mesopotamia</h2>
+      </article>
+
+      <article class="video">
+        <figure>
+        <a class="fancybox fancybox.iframe" href="//player.vimeo.com/video/7533229"><img class="videoThumb" src="https://secure-b.vimeocdn.com/ts/326/392/32639200_295.jpg"></a>
+        </figure>
+        <h2 class="videoTitle">Symhpony in Red</h2>
       </article>
 
       <article class="video">
@@ -99,20 +113,6 @@
         <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/_ZSefvtdYiY"><img class="videoThumb" src="http://i1.ytimg.com/vi/_ZSefvtdYiY/mqdefault.jpg"></a>
         </figure>
         <h2 class="videoTitle">Paganini Variations</h2>
-      </article>
-
-      <article class="video">
-        <figure>
-        <a class="fancybox fancybox.iframe" href="//player.vimeo.com/video/26890275"><img class="videoThumb" src="https://secure-b.vimeocdn.com/ts/178/010/178010767_295.jpg"></a>
-        </figure>
-        <h2 class="videoTitle">Kumru Orchestral</h2>
-      </article>
-
-      <article class="video">
-        <figure>
-        <a class="fancybox fancybox.iframe" href="//player.vimeo.com/video/7533229"><img class="videoThumb" src="https://secure-b.vimeocdn.com/ts/326/392/32639200_295.jpg"></a>
-        </figure>
-        <h2 class="videoTitle">Symhpony in Red</h2>
       </article>
 
     </section>
@@ -165,6 +165,10 @@
     margin: 1%;
     float: left;
   }
+
+  .video figure {
+    height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+    padding-bottom: 60%;
 
   /* Media Queries - This is the responsive grid. */
   @media (max-width: 1366px) {
@@ -250,6 +254,10 @@
     padding-bottom: 20px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.15);
     @include grid;
+    figure {
+      height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+      padding-bottom: 60%;
+    }
     img {
       width: 100%;
       @include hover;

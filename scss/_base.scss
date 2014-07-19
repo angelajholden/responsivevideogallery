@@ -93,6 +93,7 @@ h2 {
   text-align: center;
   padding: 5px 8px;
   margin: 0;
+  white-space: nowrap;
   @media (max-width: 1200px) {
     font-size: 15px;
   }
@@ -226,9 +227,13 @@ section {
 */
 .video {
   background: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
   @include grid;
+  figure {
+    height: 0;
+    padding-bottom: 60%;
+  }
   img {
     width: 100%;
     @include hover;
