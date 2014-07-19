@@ -47,6 +47,10 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	    margin: 1%;
 	    float: left;
 	  }
+
+	  .video figure {
+    height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+    padding-bottom: 60%;
 	  
 	  /* Media Queries - This is the responsive grid. */
 	  @media (max-width: 1366px) {
@@ -123,6 +127,10 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	  padding-bottom: 20px;
 	  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
 	  @include grid;
+	  figure {
+      height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+      padding-bottom: 60%;
+    }
 	  img {
 	    width: 100%;
 	    @include hover;
