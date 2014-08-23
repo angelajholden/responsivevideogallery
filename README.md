@@ -48,6 +48,8 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	    float: left;
 	  }
 
+	  /* These keep the height of each video consistent between YouTube and Vimeo. 
+	  Each can have thumbnail sizes that vary by 1px and are likely break your layout. */
 	  .video figure {
     height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
     padding-bottom: 60%;
@@ -128,7 +130,7 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 	  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
 	  @include grid;
 	  figure {
-      height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+      height: 0;
       padding-bottom: 60%;
     }
 	  img {

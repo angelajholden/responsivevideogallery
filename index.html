@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="author" href="https://plus.google.com/u/0/+AngelaHoldenDesign/posts">
+    <meta name="description" content="Learn to build a simple, responsive grid for displaying and playing videos using CSS and jQuery.">
     <link rel="shortcut icon" href="favicon.ico">
     <title>Responsive Video Gallery</title>
     <link rel="stylesheet" href="css/main.css">
@@ -166,8 +168,10 @@
     float: left;
   }
 
+   /* These keep the height of each video consistent between YouTube and Vimeo.
+   Each can have thumbnail sizes that vary by 1px and are likely break your layout. */
   .video figure {
-    height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+    height: 0;
     padding-bottom: 60%;
 
   /* Media Queries - This is the responsive grid. */
@@ -255,7 +259,7 @@
     box-shadow: 0 1px 1px rgba(0,0,0,0.15);
     @include grid;
     figure {
-      height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+      height: 0;
       padding-bottom: 60%;
     }
     img {
@@ -310,23 +314,11 @@
   <footer>
     <p>Simple Responsive Video Gallery by <a href="http://angelajholden.com" target="_blank">Angela J. Holden</a><p>
     <p>Use it • Change it • Make something cool with it</p>
+    <a href="#" class="scroll-top">↑</a>
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.fancybox').fancybox({
-        padding   : 0,
-        maxWidth  : '100%',
-        maxHeight : '100%',
-        width   : 560,
-        height    : 315,
-        autoSize  : true,
-        closeClick  : true,
-        openEffect  : 'elastic',
-        closeEffect : 'elastic'
-      });
-    });
-  </script>
+  <script src="js/global.min.js"></script>
+  
 </html>
