@@ -9,9 +9,9 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 + http://www.fancyapps.com/fancybox/#license
 + https://github.com/fancyapps/fancyBox
 
-## See <a href="http://responsivevideogallery.com" target="_blank">The Video Gallery</a>
+See the <a href="http://responsivevideogallery.com" target="_blank">responsive video gallery</a>
 
-# First write the HTML
+## First write the HTML
 
 ```html
 <article class="video">
@@ -28,20 +28,21 @@ Fancybox is Copyright Protected by Janis Skarnelis:
 3. Right click on the YouTube or Vimeo video thumbnail and copy the image URL for the source.
 4. Use your own class names for the `article`, `img src`, and video title.
 
-# Next write the CSS
-## First the vanilla CSS:
+## Next is the CSS:
 
 ```css
 /* First make sure the video thumbnail images are responsive. */
+
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* 
 This is the starting grid for each video with thumbnails 5 across for the largest screen size.
 It's important to use percentages or there may be gaps on the right side of the page. 
 */
+
 .video {
   background: #fff;
   padding-bottom: 20px;
@@ -55,26 +56,32 @@ It's important to use percentages or there may be gaps on the right side of the 
 These keep the height of each video consistent between YouTube and Vimeo. 
 Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
 */
+
 .video figure {
-height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
-padding-bottom: 60%;
+  height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
+  padding-bottom: 60%;
+}
 
 /* Media Queries - This is the responsive grid. */
+
 @media (max-width: 1366px) {
   .video {
     width: 23%; /* Thumbnails 4 across */
   }
 }
+
 @media (max-width: 1024px) {
   .video {
     width: 31.333%; /* Thumbnails 3 across */
   }
 }
+
 @media (max-width: 600px) {
   .video {
     width: 48%; /* Thumbnails 2 across */
   }
 }
+
 @media (max-width: 360px) {
   .video {
     display: block;
@@ -85,10 +92,12 @@ padding-bottom: 60%;
 }
 
 /* These are my preferred rollover styles. */
+
 .video img {
   width: 100%;
   opacity: 1;
 }
+
 .video img:hover, .video img:active, .video img:focus {
   opacity: 0.75;
 }
@@ -99,7 +108,7 @@ padding-bottom: 60%;
 3. It’s important to stretch the thumbnail image with `width:100%` on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the article is smaller than the images's natural size, and `max-width:100%` takes over so the images are responsive.
 4. Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
 
-# Use as a mixin in Sass
+## Use as a mixin with Sass
 
 ```sass
 @mixin grid {
@@ -149,7 +158,7 @@ padding-bottom: 60%;
 }
 ```
 
-# Using Fancybox
+## Using Fancybox
 
 Fancybox comes with a style sheet you can copy and paste into your CSS. If you’re using Sass, you should create a partial file and `@import` it into your global or main style sheet.
 
