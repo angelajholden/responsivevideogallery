@@ -137,7 +137,7 @@ section {
 /* First Section */
 .first {
   background: url(../images/bg.jpg) no-repeat center center fixed; 
-  @include background-size(cover);
+  background-size: cover;
   p {
     width: 50%;
     margin: 10% auto;
@@ -166,7 +166,7 @@ section {
       border: 2px solid $orange;
       border-radius: 10px;
       text-decoration: none;
-      @include single-transition(all, 0.3s, ease);
+      transition: all, 0.3s, ease;
       @media (max-width: 1024px) {
         padding: 15px;
         font-size: 22px;
@@ -290,7 +290,7 @@ footer {
   color: #fff;
   background-color: rgba(0,0,0,0.5);
   text-decoration: none;
-  @include border-radius(5px);
+  border-radius: 5px;
   border-bottom: none;
   text-align: center;
   cursor: pointer;

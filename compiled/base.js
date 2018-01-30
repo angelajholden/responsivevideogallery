@@ -1,15 +1,3 @@
-/*
- * fancyBox - jQuery Plugin
- * version: 2.1.5 (Fri, 14 Jun 2013)
- * requires jQuery v1.6 or later
- *
- * Examples at http://fancyapps.com/fancybox/
- * License: www.fancyapps.com/fancybox/#license
- *
- * Copyright 2012 Janis Skarnelis - janis@fancyapps.com
- *
- */
-
 ;(function (window, document, $, undefined) {
 	"use strict";
 
@@ -2014,3 +2002,35 @@
 	});
 
 }(window, document, jQuery));
+//* Fancybox
+$(document).ready(function() {
+  $('.fancybox').fancybox({
+    padding   : 0,
+    maxWidth  : '100%',
+    maxHeight : '100%',
+    width   : 560,
+    height    : 315,
+    autoSize  : true,
+    closeClick  : true,
+    openEffect  : 'elastic',
+    closeEffect : 'elastic'
+  });
+});
+
+//* Smooth Scroll to Top
+$(document).ready(function() {
+  var offset = 220;
+  var duration = 500;
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > offset) {
+      $('.scroll-top').fadeIn(duration);
+    } else {
+      $('.scroll-top').fadeOut(duration);
+    }
+  });
+$('.scroll-top').click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop: 0}, duration);
+    return false;
+  })
+});
