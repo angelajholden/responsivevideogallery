@@ -113,7 +113,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  padding: 5px 8px;
+  padding: 15px 8px;
   margin: 0;
   white-space: nowrap;
 }
@@ -269,17 +269,11 @@ section {
 */
 .video {
   background: #fff;
-  padding-bottom: 15px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 18%;
+  width: 23%;
   margin: 1%;
   float: left;
-  transition: all, 0.5s, ease;
-}
-@media (max-width: 1366px) {
-  .video {
-    width: 23%;
-  }
+  transition: all, 0.3s, ease;
 }
 @media (max-width: 1024px) {
   .video {
@@ -301,7 +295,15 @@ section {
 }
 .video figure {
   height: 0;
-  padding-bottom: 60%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.video figure a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 0;
 }
 .video img {
   width: 100%;
@@ -407,6 +409,8 @@ footer {
   background: #f9f9f9;
   color: #444;
   text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -415,6 +419,8 @@ footer {
 }
 
 .fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -600,6 +606,8 @@ footer {
   background: transparent;
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
   border-radius: 15px;
   text-shadow: 0 1px 2px #222;
   color: #FFF;

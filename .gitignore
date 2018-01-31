@@ -5,4 +5,5 @@ tmp/
 *.css.map
 *.ico
 *.png
+*.txt
 google*.html

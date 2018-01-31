@@ -91,7 +91,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  padding: 5px 8px;
+  padding: 15px 8px;
   margin: 0;
   white-space: nowrap;
   @media (max-width: 1200px) {
@@ -227,12 +227,19 @@ section {
 */
 .video {
   background: #fff;
-  padding-bottom: 15px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
   @include grid;
   figure {
     height: 0;
-    padding-bottom: 60%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    a {
+    	display: block;
+    	margin: 0;
+    	padding: 0;
+    	border: none;
+    	line-height: 0;
+    }
   }
   img {
     width: 100%;

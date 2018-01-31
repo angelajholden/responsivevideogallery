@@ -16,13 +16,10 @@ $blue: #2b4f71;
 
 // Grid - This works best with percentages used for the width and margins.
 @mixin grid {
-	width: 18%;
+	width: 23%;
 	margin: 1%;
 	float: left;
-	transition: all, 0.5s, ease;
-	@media (max-width: 1366px) {
-		width: 23%;
-	}
+	transition: all, 0.3s, ease;
 	@media (max-width: 1024px) {
 		width: 31.333%;
 	}
