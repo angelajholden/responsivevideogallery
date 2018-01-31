@@ -47,28 +47,31 @@ It's important to use percentages or there may be gaps on the right side of the 
   background: #fff;
   padding-bottom: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 18%; /* Thumbnails 5 across */
+  width: 23%; /* Thumbnails 4 across */
   margin: 1%;
   float: left;
 }
 
 /* 
-These keep the height of each video consistent between YouTube and Vimeo. 
+These styles keep the height of each video thumbnail consistent between YouTube and Vimeo. 
 Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
 */
 
 .video figure {
-  height: 0; /* These keep the height of each video consistent between YouTube and Vimeo, which have thumbnail sizes that vary by 1px and can break your layout. */
-  padding-bottom: 60%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.video figure a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 0;
 }
 
 /* Media Queries - This is the responsive grid. */
-
-@media (max-width: 1366px) {
-  .video {
-    width: 23%; /* Thumbnails 4 across */
-  }
-}
 
 @media (max-width: 1024px) {
   .video {
@@ -107,56 +110,6 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 2. Keeping the widths and margins fluid with percentages is important for this gallery’s responsive layout. If you use `px`, `em`, or `rem`, you’re likely to have large gaps on the right side of the page.
 3. It’s important to stretch the thumbnail image with `width:100%` on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the article is smaller than the images's natural size, and `max-width:100%` takes over so the images are responsive.
 4. Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
-
-## Use as a mixin with Sass
-
-```sass
-@mixin grid {
-  width: 18%;
-  margin: 1%;
-  float: left;
-  @media (max-width: 1366px) {
-    width: 23%;
-  }
-  @media (max-width: 1024px) {
-    width: 31.333%;
-  }
-  @media (max-width: 600px) {
-    width: 48%;
-  }
-  @media (max-width: 360px) {
-    display: block;
-    width: 96%;
-    margin: 2%;
-    float: none;
-  }
-}
-@mixin hover {
-  opacity: 1;
-  &:hover, &:active, &:focus {
-    opacity: 0.75;
-  }
-}
-```
-
-## Then include it in your video style:
-
-```sass
-.video {
-  background: #fff;
-  padding-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
-  @include grid;
-  figure {
-    height: 0;
-    padding-bottom: 60%;
-  }
-  img {
-    width: 100%;
-    @include hover;
-  }
-}
-```
 
 ## Using Fancybox
 
