@@ -28,7 +28,7 @@ See the <a href="http://responsivevideogallery.com" target="_blank">responsive v
 3. Right click on the YouTube or Vimeo video thumbnail and copy the image URL for the source.
 4. Use your own class names for the `article`, `img src`, and video title.
 
-## Next is the CSS:
+## Next is the CSS
 
 ```css
 /* First make sure the video thumbnail images are responsive. */
