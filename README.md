@@ -115,7 +115,7 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 
 Fancybox comes with a style sheet you can copy and paste into your CSS. If you’re using Sass, you should create a partial file and `@import` it into your global or main style sheet.
 
-## Calling and writing the scripts:
+### Calling and writing the scripts:
 
 ```javascript
 // These should go in the footer.
