@@ -115,28 +115,28 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 
 ```javascript
 // These can go in the footer.
-&lt;script
+<script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">&lt;/script>
+  crossorigin="anonymous"></script>
 
-&lt;script>js/jquery.fancybox.min.js&lt;/script>
+<script>js/jquery.fancybox.min.js</script>
 
-&lt;script>
+<script>
   $(document).ready(function() {
     $('.fancybox').fancybox({
-      padding   : 0,
-      maxWidth  : '100%',
-      maxHeight : '100%',
-      width   : 560,
-      height    : 315,
-      autoSize  : true,
+      padding   	: 0,
+      maxWidth  	: '100%',
+      maxHeight 	: '100%',
+      width   		: 560,
+      height    	: 315,
+      autoSize  	: true,
       closeClick  : true,
       openEffect  : 'elastic',
       closeEffect : 'elastic'
     });
   });
-&lt;/script>
+</script>
 ```
 1. Fancybox includes a style sheet you need to copy and paste into your CSS.
 2. First call the jQuery library from the <a href="http://code.jquery.com/" target="_blank">jQuery CDN</a>.
