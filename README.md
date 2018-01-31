@@ -39,7 +39,7 @@ img {
 }
 
 /* 
-This is the starting grid for each video with thumbnails 5 across for the largest screen size.
+This is the starting grid for each video with thumbnails 4 across for the largest screen size.
 It's important to use percentages or there may be gaps on the right side of the page. 
 */
 
@@ -113,31 +113,32 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 
 ## Using Fancybox
 
-Fancybox comes with a style sheet you can copy and paste into your CSS.
-
-### Calling and writing the scripts:
-
 ```javascript
-// These should go in the footer.
-<script>//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js</script>
-<script>js/jquery.fancybox.min.js</script>
+// These can go in the footer.
+&lt;script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">&lt;/script>
 
-// If you don't use a global js sheet, these can also go in the footer.
-$(document).ready(function() {
-  $('.fancybox').fancybox({
-    padding   : 0,
-    maxWidth  : '100%',
-    maxHeight : '100%',
-    width   : 560,
-    height    : 315,
-    autoSize  : true,
-    closeClick  : true,
-    openEffect  : 'elastic',
-    closeEffect : 'elastic'
+&lt;script>js/jquery.fancybox.min.js&lt;/script>
+
+&lt;script>
+  $(document).ready(function() {
+    $('.fancybox').fancybox({
+      padding   : 0,
+      maxWidth  : '100%',
+      maxHeight : '100%',
+      width   : 560,
+      height    : 315,
+      autoSize  : true,
+      closeClick  : true,
+      openEffect  : 'elastic',
+      closeEffect : 'elastic'
+    });
   });
-});
+&lt;/script>
 ```
-
-1. First call the jQuery library from the <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank">Google API</a>.
-2. Then link to the Fancybox script.
-3. There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
+1. Fancybox includes a style sheet you need to copy and paste into your CSS.
+2. First call the jQuery library from the <a href="http://code.jquery.com/" target="_blank">jQuery CDN</a>.
+3. Then initialize Fancybox.
+4. There's a lot of documentation on how to use Fancybox. You can check the docs on <a href="https://github.com/fancyapps/fancyBox" target="_blank">GitHub</a>, on <a href="http://fancybox.net/" target="_blank">fancybox.net</a>, and on <a href="http://fancyapps.com/fancybox/" target="_blank">fancyapps.com</a>.
