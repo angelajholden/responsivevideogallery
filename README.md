@@ -106,14 +106,14 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 }
 ```
 
-1. The media query breakpoints are videos 5 across for screen sizes greater than 1366px, 4 across for sizes greater than 1024px, 3 across for sizes greater than 600px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather `display:block` in a single column.
-2. Keeping the widths and margins fluid with percentages is important for this gallery’s responsive layout. If you use `px`, `em`, or `rem`, you’re likely to have large gaps on the right side of the page.
+1. The media query breakpoints are videos 4 across for sizes greater than 1024px, 3 across for sizes greater than 600px, and 2 across for sizes greater than 360px. At 360px the videos are no longer floated, but rather `display:block` in a single column.
+2. I like the widths and margins to be fluid with percentages for the responsive layout.
 3. It’s important to stretch the thumbnail image with `width:100%` on screen sizes that exceed the natural size of the image. When the screen size is smaller, the width of the article is smaller than the images's natural size, and `max-width:100%` takes over so the images are responsive.
-4. Styling the video titles is the most important aspect of this layout. If the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
+4. Styling the video titles are also important – if the titles are on top of, or below, the video, and are not consistent across each video, each article height will be different and break the layout.
 
 ## Using Fancybox
 
-Fancybox comes with a style sheet you can copy and paste into your CSS. If you’re using Sass, you should create a partial file and `@import` it into your global or main style sheet.
+Fancybox comes with a style sheet you can copy and paste into your CSS.
 
 ### Calling and writing the scripts:
 
