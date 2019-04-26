@@ -53,7 +53,7 @@
         <a class="fancybox fancybox.iframe" href="//www.youtube.com/embed/zH3ZohGnjcg"><img class="videoThumb" src="//i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
         </figure>
         <!-- <h2 class="videoTitle">Kumru Ballad</h2> -->
-        <h2 class="videoTitle"><?php echo youtube_title(yourvideoId); ?></h2>
+        <h2 class="videoTitle"><?php echo youtube_title('yourvideoId'); ?></h2>
       </article>
       <article class="video">
         <figure>
