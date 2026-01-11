@@ -1,4 +1,6 @@
-# Responsive Video Gallery
+# Responsive Video Gallery - Deprecated
+
+## Checkout [The New Responsive Video Gallery ](https://github.com/angelajholden/responsivevideogallery_open)
 
 I recently worked on a website redesign that needed a video gallery. It was a WordPress project and would contain videos from YouTube and Vimeo. I decided a custom post type and custom fields was the best approach, and what follows is the HTML5/CSS and jQuery app, Fancybox.
 
@@ -6,8 +8,8 @@ The code I wrote is open source and free to be copied, used, and changed.
 
 Fancybox is Copyright Protected by Janis Skarnelis:
 
-+ http://www.fancyapps.com/fancybox/#license
-+ https://github.com/fancyapps/fancyBox
+-   http://www.fancyapps.com/fancybox/#license
+-   https://github.com/fancyapps/fancyBox
 
 See the <a href="http://responsivevideogallery.com" target="_blank">responsive video gallery</a>
 
@@ -15,11 +17,12 @@ See the <a href="http://responsivevideogallery.com" target="_blank">responsive v
 
 ```html
 <article class="video">
-  <figure>
-    <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/paG__3FBLzI">
-    <img class="videoThumb" src="http://i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg"></a>
-  </figure>
-  <h2 class="videoTitle">Mesopotamia</h2>
+	<figure>
+		<a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/paG__3FBLzI">
+			<img class="videoThumb" src="http://i1.ytimg.com/vi/paG__3FBLzI/mqdefault.jpg" />
+		</a>
+	</figure>
+	<h2 class="videoTitle">Mesopotamia</h2>
 </article>
 ```
 
@@ -34,8 +37,8 @@ See the <a href="http://responsivevideogallery.com" target="_blank">responsive v
 /* First make sure the video thumbnail images are responsive. */
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* 
@@ -44,12 +47,12 @@ It's important to use percentages or there may be gaps on the right side of the 
 */
 
 .video {
-  background: #fff;
-  padding-bottom: 20px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-  width: 23%; /* Thumbnails 4 across */
-  margin: 1%;
-  float: left;
+	background: #fff;
+	padding-bottom: 20px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	width: 23%; /* Thumbnails 4 across */
+	margin: 1%;
+	float: left;
 }
 
 /* 
@@ -58,51 +61,53 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
 */
 
 .video figure {
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%;
+	overflow: hidden;
 }
 
 .video figure a {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  line-height: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	line-height: 0;
 }
 
 /* Media Queries - This is the responsive grid. */
 
 @media (max-width: 1024px) {
-  .video {
-    width: 31.333%; /* Thumbnails 3 across */
-  }
+	.video {
+		width: 31.333%; /* Thumbnails 3 across */
+	}
 }
 
 @media (max-width: 600px) {
-  .video {
-    width: 48%; /* Thumbnails 2 across */
-  }
+	.video {
+		width: 48%; /* Thumbnails 2 across */
+	}
 }
 
 @media (max-width: 360px) {
-  .video {
-    display: block;
-    width: 96%; /* Single column view. */
-    margin: 2%; /* The smaller the screen, the smaller the percentage actually is. */
-    float: none;
-  }
+	.video {
+		display: block;
+		width: 96%; /* Single column view. */
+		margin: 2%; /* The smaller the screen, the smaller the percentage actually is. */
+		float: none;
+	}
 }
 
 /* These are my preferred rollover styles. */
 
 .video img {
-  width: 100%;
-  opacity: 1;
+	width: 100%;
+	opacity: 1;
 }
 
-.video img:hover, .video img:active, .video img:focus {
-  opacity: 0.75;
+.video img:hover,
+.video img:active,
+.video img:focus {
+	opacity: 0.75;
 }
 ```
 
@@ -138,6 +143,7 @@ Each can have thumbnail sizes that vary by 1px and are likely break your layout.
   });
 </script>
 ```
+
 1. Fancybox includes a style sheet you need to copy and paste into your CSS.
 2. First call the jQuery library from the <a href="http://code.jquery.com/" target="_blank">jQuery CDN</a>.
 3. Then initialize Fancybox.

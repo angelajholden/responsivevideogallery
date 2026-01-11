@@ -1,5 +1,6 @@
 node_modules/
 tmp/
+.vscode
 .npm-debug.log
 .sass-cache
 *.css.map
